@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+ {% block content %}
+    
+      <center>
+        <h2>Homepage</h2>
+
+        <form action="">
+          <input type="text" name="q" id="">
+          <input type="submit" value="search">
+        </form>
+
+        {% for i in data %}
+            <h2>{{i.title}} // {{i.desc}}
+              <a href="{% url 'update' i.id %}">update</a>
+              <a href="{% url 'delete_' i.id %}">delete</a>
+            </h2>
+        {% endfor %}
+
+      </center>
+
+    {% endblock content %}

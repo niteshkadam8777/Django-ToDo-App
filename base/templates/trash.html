@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+ {% block content %}
+    
+      <center>
+        <h2>Trash</h2>
+        <a href="{% url 'restore_all'  %}">restore all </a>
+        <a href="{% url 'clear_all'  %}">clear all</a>
+        {% for i in data %}
+            <h2>{{i.title}} // {{i.desc}}
+                <a href="{% url 'p_delete' i.id %}">delete</a>
+                <a href="{% url 'restore' i.id %}">restore</a>
+            </h2>
+        {% endfor %}
+
+      </center>
+
+    {% endblock content %}

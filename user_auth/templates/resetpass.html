@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <center>
+        <h2>Reset Password Here</h2>
+        {% if not_verified %}
+                <h2 style="color: red;">Old password is not matching !!!</h2>
+        {% endif %}
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {% if verified %}
+                <label  style="color: green;" for="">enter new password</label>
+                <input type="password" name="newpass"> <br>
+            {% else %}
+                <label  style="color: rgb(255, 0, 0);"  for="">enter old password</label>
+                <input type="password" name="oldpass"> <br>
+            {% endif %}
+
+            <input type="submit">
+        </form>
+    </center>
+
+{% endblock content %}

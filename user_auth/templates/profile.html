@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+ {% block content %}
+    
+      <center>
+        <h2>User Profile</h2>
+        <h2>username = {{request.user}}</h2>
+        <h2>verified = {{request.user.is_authenticated}}</h2>
+        <h2>firstname = {{request.user.first_name}}</h2>
+        <h2>lastname = {{request.user.last_name}}</h2>
+        <h2>email = {{request.user.email}}</h2>
+        <a href="{% url 'update_profile' %}">Update Profile</a>
+        <a href="{% url 'resetpass' %}">Reset Password</a>
+        <a href="{% url 'logout_' %}">Logout</a>
+        
+      </center>
+
+    {% endblock content %}

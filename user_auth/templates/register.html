@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <center>
+        <h2>Register Here</h2>
+
+        {% if status %}
+                <h2 style="color: red;" >Username is already taken !! please try with different username</h2>
+        {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="">Firstname</label>
+            <input type="text" name="firstname"> <br>
+             <label for="">Lastname</label>
+            <input type="text" name="lastname"> <br>
+             <label for="">email</label>
+            <input type="text" name="email"> <br>
+             <label for="">Username</label>
+            <input type="text" name="username"> <br>
+             <label for="">Password</label>
+            <input type="password" name="password"> <br>
+             <label for="">confirm Password</label>
+            <input type="password" name="confirm_password"> <br>
+
+            <input type="submit">
+        </form>
+    </center>
+
+{% endblock content %}
