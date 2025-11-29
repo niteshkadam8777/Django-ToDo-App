@@ -1,5 +1,5 @@
 The project you've developed is a comprehensive Django TODO Web Application designed to manage personal tasks and user accounts. It demonstrates a full-stack approach using the Model-View-Template (MVT) architecture.<br>
-​📝 Project Overview<br>
+​📝<b> Project Overview</b><br>
 ​This application is split into two primary Django apps:<br>
 ​user_auth (User Authentication): Handles the security and user identity aspect of the application.
 ​base (Task Management): Contains the core logic for the To-Do list functionality.<br>
